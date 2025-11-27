@@ -1,11 +1,8 @@
 <template>
- <div class='px-75'>
-  <Hero/>
-    <div class='py-20 px-10'>
-  <Card/>
-    </div>
-
-</div>
+  <div class="flex flex-col gap-50">
+    <Hero/>
+    <Card/>
+  </div>
 </template>
 
 <script setup lang="ts">
