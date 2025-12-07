@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 import type { RouteParams } from 'vue-router'
-import type { AppRouteNames } from 'src/router'
+import type { AppRouteNames } from '@/router'
 
 export interface AppLinkProps {
   name: AppRouteNames

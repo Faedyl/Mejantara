@@ -16,8 +16,8 @@
             Platform cloud computing terpercaya untuk bisnis modern. Tingkatkan infrastruktur Anda dengan teknologi terdepan.
           </p>
           <div class="flex gap-3 pt-2">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-amber-500/50 text-gray-400 hover:text-amber-500 text-sm transition-all duration-300">GitHub</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-amber-500/50 text-gray-400 hover:text-amber-500 text-sm transition-all duration-300">LinkedIn</a>
+            <a href="https://github.com/faedyl" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-amber-500/50 text-gray-400 hover:text-amber-500 text-sm transition-all duration-300">GitHub</a>
+            <a href="https://linkedin.com/in/fadhil-awalia-kusuma-584338242/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-amber-500/50 text-gray-400 hover:text-amber-500 text-sm transition-all duration-300">LinkedIn</a>
           </div>
         </div>
 

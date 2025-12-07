@@ -9,6 +9,9 @@ export type AppRouteNames =
   | 'testimoni'
   | 'faq'
   | 'login'
+  | 'dashboard'
+  | 'dashboardEdit'
+  | 'dashboardStatistic'
 
 
 export const routes: RouteRecordRaw[] = [
@@ -36,6 +39,21 @@ export const routes: RouteRecordRaw[] = [
     name: 'login',
     path: '/login',
     component: () => import('./pages/Login.vue')
+  },
+  {
+    name: 'dashboard',
+    path: '/dashboard',
+    component: () => import('./pages/Dashboard.vue')
+  },
+  {
+    name: 'dashboardEdit',
+    path: '/dashboard/edit/:id',
+    component: () => import('./pages/DashboardEdit.vue')
+  },
+  {
+    name: 'dashboardStatistic',
+    path: '/dashboard/statistic',
+    component: () => import('./pages/DashboardStatistic.vue')
   },
 ]
 export const router = createRouter({

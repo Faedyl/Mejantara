@@ -1,71 +1,71 @@
 <template>
-  <div class="border-1 text-white flex flex-col rounded-4xl p-12 gap-8 mx-75">
+  <div class="relative border-1  bg-primaryDark/10 backdrop-blur-lg text-white flex flex-col rounded-2xl sm:rounded-3xl md:rounded-4xl p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 gap-4 sm:gap-6 md:gap-8 mx-4 sm:mx-6 md:mx-8 lg:mx-12 xl:mx-20">
 
-    <div class="flex justify-between w-full items-center">
-      <span class="text-left font-bold text-2xl">
+    <div class="flex flex-col lg:flex-row justify-between w-full items-start lg:items-center gap-4 lg:gap-0">
+      <span class="text-left font-bold text-base sm:text-lg md:text-xl lg:text-2xl max-w-full lg:max-w-md">
         {{ currentCategory.description }}
       </span>
 
-      <div class="flex gap-2 border-1 p-2 rounded-2xl">
-        <div class="flex-2">
-          <button 
-            @click="activeCategory = 'web'"
+      <div class="flex gap-1.5 sm:gap-2 border-1 p-1.5 sm:p-2 rounded-xl sm:rounded-2xl w-full lg:w-auto">
+        <div class="flex-1">
+          <button
+            @click="handleCategoryClick('web')"
             :class="activeCategory === 'web' ? 'bg-primaryActive' : 'border-1'"
-            class="rounded-2xl transition-colors"
+            class="rounded-xl sm:rounded-2xl transition-colors w-full"
           >
-            <div class="py-2 px-8 font-bold">Web</div>
+            <div class="py-2 px-3 sm:px-4 md:px-6 lg:px-8 font-bold text-sm sm:text-base">Web</div>
           </button>
         </div>
-        <div class="flex-3">
-          <button 
-            @click="activeCategory = 'vpn'"
+        <div class="flex-1">
+          <button
+            @click="handleCategoryClick('vpn')"
             :class="activeCategory === 'vpn' ? 'bg-primaryActive' : 'border-1'"
-            class="rounded-2xl transition-colors"
+            class="rounded-xl sm:rounded-2xl transition-colors w-full"
           >
-            <div class="py-2 px-8 font-bold">VPN</div>
+            <div class="py-2 px-3 sm:px-4 md:px-6 lg:px-8 font-bold text-sm sm:text-base">VPN</div>
           </button>
         </div>
-        <div class="flex-4">
-          <button 
-            @click="activeCategory = 'storage'"
+        <div class="flex-1">
+          <button
+            @click="handleCategoryClick('storage')"
             :class="activeCategory === 'storage' ? 'bg-primaryActive' : 'border-1'"
-            class="rounded-2xl transition-colors"
+            class="rounded-xl sm:rounded-2xl transition-colors w-full"
           >
-            <div class="py-2 px-8 font-bold">STORAGE</div>
+            <div class="py-2 px-3 sm:px-4 md:px-6 lg:px-8 font-bold text-sm sm:text-base">STORAGE</div>
           </button>
         </div>
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-8 w-full">
 
-      <div 
-        v-for="(plan, index) in currentCategory.plans" 
+      <div
+        v-for="(plan, index) in currentCategory.plans"
         :key="index"
-        class="flex flex-col rounded-[3rem] border border-white/50 overflow-hidden bg-primary"
+        class="flex flex-col rounded-2xl sm:rounded-3xl lg:rounded-[3rem] border border-white/50 overflow-hidden bg-primary w-full"
       >
 
-        <div class="p-8 flex flex-col">
+        <div class="p-5 sm:p-6 md:p-7 lg:p-8 flex flex-col flex-1">
           <div class="flex justify-end">
-            <span class="px-10 py-3 rounded-full font-extrabold text-2xl bg-primarySecond text-primary">
+            <span class="px-5 sm:px-7 md:px-8 lg:px-10 py-2 sm:py-2.5 md:py-3 rounded-full font-extrabold text-lg sm:text-xl md:text-2xl bg-primarySecond text-primary">
               {{ plan.name }}
             </span>
           </div>
 
-          <div class="text-white flex flex-col gap-3 font-bold text-xl text-left mt-6">
+          <div class="text-white flex flex-col gap-2 sm:gap-2.5 md:gap-3 font-bold text-sm sm:text-base md:text-lg text-left mt-4 sm:mt-5 md:mt-6">
             <span v-for="(feature, idx) in plan.features" :key="idx">{{ feature }}</span>
           </div>
 
-          <div class="text-white text-left mt-12">
-            <span class="text-[5rem] leading-none font-extrabold">{{ plan.price }}</span>
-            <span class="text-3xl font-bold">.000/bln</span>
+          <div class="text-white text-left mt-8 sm:mt-10 md:mt-12 lg:mt-auto flex flex-wrap items-baseline gap-1">
+            <span class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight font-extrabold">{{ plan.price }}</span>
+            <span class="text-base sm:text-lg md:text-xl lg:text-2xl font-bold whitespace-nowrap">.000/bln</span>
           </div>
         </div>
 
-        <div class="border-t border-white/30 mx-8"></div>
+        <div class="border-t border-white/30 mx-5 sm:mx-6 md:mx-7 lg:mx-8"></div>
 
-        <div class="p-8">
-          <button class="w-full rounded-full py-5 font-extrabold text-3xl transition-transform hover:scale-105 bg-primarySecond text-primary">
+        <div class="p-5 sm:p-6 md:p-7 lg:p-8">
+          <button class="w-full rounded-full py-3 sm:py-4 md:py-5 font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl transition-transform hover:scale-105 bg-primarySecond text-primary">
             Pilih {{ plan.name }}
           </button>
         </div>
@@ -73,13 +73,26 @@
       </div>
 
     </div>
+
+    <GimmickSlider ref="sliderRef" :positions="3" position="bottom-right" />
   </div>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
+import GimmickSlider from './GimmickSlider.vue'
 
 const activeCategory = ref('web')
+const sliderRef = ref(null)
+
+const categoryMap = { web: 0, vpn: 1, storage: 2 }
+
+const handleCategoryClick = (category) => {
+  activeCategory.value = category
+  if (sliderRef.value) {
+    sliderRef.value.setPosition(categoryMap[category])
+  }
+}
 
 const categories = {
   web: {

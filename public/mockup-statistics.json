@@ -1,0 +1,56 @@
+{
+  "810239": {
+    "title": "React E-Commerce Platform",
+    "3h": {
+      "dataPoints": 12,
+      "minVisits": 50,
+      "maxVisits": 150
+    },
+    "1D": {
+      "dataPoints": 24,
+      "minVisits": 100,
+      "maxVisits": 300
+    },
+    "Month": {
+      "dataPoints": 30,
+      "minVisits": 500,
+      "maxVisits": 2000
+    }
+  },
+  "8102739": {
+    "title": "Wordpress",
+    "3h": {
+      "dataPoints": 12,
+      "minVisits": 30,
+      "maxVisits": 120
+    },
+    "1D": {
+      "dataPoints": 24,
+      "minVisits": 80,
+      "maxVisits": 250
+    },
+    "Month": {
+      "dataPoints": 30,
+      "minVisits": 400,
+      "maxVisits": 1800
+    }
+  },
+  "992011": {
+    "title": "Laravel API",
+    "3h": {
+      "dataPoints": 12,
+      "minVisits": 40,
+      "maxVisits": 130
+    },
+    "1D": {
+      "dataPoints": 24,
+      "minVisits": 90,
+      "maxVisits": 280
+    },
+    "Month": {
+      "dataPoints": 30,
+      "minVisits": 450,
+      "maxVisits": 1900
+    }
+  }
+}
