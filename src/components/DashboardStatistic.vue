@@ -3,27 +3,19 @@
 
     <div class="absolute top-0 left-0 w-full h-96 bg-gradient-to-br from-primaryDark via-primaryActive to-primary -z-10"></div>
 
-    <header class="flex justify-between items-center px-4 sm:px-8 py-4 sm:py-6 border-b border-white/10">
-      <div class="flex items-center gap-4">
-        <button
-          @click="emit('toggle-sidebar')"
-          class="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors"
-          aria-label="Toggle menu"
-        >
-          <Menu :size="24" />
-        </button>
-        <h1 class="text-xl sm:text-2xl font-bold tracking-wide">Mejantara</h1>
-      </div>
-      <DashboardUserMenu userName="Faedyl" />
-    </header>
+    <DashboardHeader 
+      title="Mejantara" 
+      userName="Faedyl"
+      @toggle-sidebar="emit('toggle-sidebar')"
+    />
 
     <div class="p-4 sm:p-6 lg:p-8">
-      <div class="relative max-w-4xl mx-auto border border-white/20 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 bg-primaryDark/40 backdrop-blur-lg shadow-2xl">
+      <div class="relative max-w-4xl mx-auto border border-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 bg-primaryDark/40 backdrop-blur-lg shadow-2xl">
 
       <div class="flex flex-col md:flex-row justify-between items-center mb-6 sm:mb-10 gap-4">
         <h2 class="text-2xl sm:text-3xl font-bold tracking-wide">Statistik</h2>
 
-        <div class="flex items-center bg-primaryDark border border-white/30 rounded-full p-1">
+        <div class="flex items-center bg-primaryDark border border-white rounded-full p-1">
           <button
             v-for="tab in tabs"
             :key="tab"
@@ -56,9 +48,8 @@
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
-import { Menu } from 'lucide-vue-next'
 import StatCard from './DashboardStatCard.vue'
-import DashboardUserMenu from './DashboardUserMenu.vue'
+import DashboardHeader from './DashboardHeader.vue'
 import GimmickSlider from './GimmickSlider.vue'
 
 const emit = defineEmits(['toggle-sidebar'])
