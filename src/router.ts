@@ -55,6 +55,11 @@ export const routes: RouteRecordRaw[] = [
     path: '/dashboard/statistic',
     component: () => import('./pages/DashboardStatistic.vue')
   },
+  {
+    name: 'about-me',
+    path: '/about-me',
+    component: () => import('./pages/aboutme.vue')
+  }
 ]
 export const router = createRouter({
   history: createWebHistory(),
